@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+
+        <link rel="stylesheet" href="calc.css" />
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div id="container">
+            <div id="display">
+                <p id="upper-expression"></p>
+                <p id="lower-expression"></p>
+            </div>
+
+            <div id="upper-row">
+                <div id="CE" onclick="clearAll()">
+                    <p>CE</p>
+                </div>
+                <div id="C" onclick="clearLower()">
+                    <p>C</p>
+                </div>
+                <div id="backspace" onclick="backspace()">
+                    <i class="fas fa-backspace"></i>
+                </div>
+            </div>
+
+            <div id="number-operator-pannel">
+                <div id="no9" onclick="addLower(9)">
+                    <p>9</p>
+                </div>
+                <div id="no8" onclick="addLower(8)">
+                    <p>8</p>
+                </div>
+                <div id="no7" onclick="addLower(7)">
+                    <p>7</p>
+                </div>
+                <div id="divide" onclick="addUpper(' / ')">
+                    <p>/</p>
+                </div>
+                <div id="no6" onclick="addLower(6)">
+                    <p>6</p>
+                </div>
+                <div id="no5" onclick="addLower(5)">
+                    <p>5</p>
+                </div>
+                <div id="no4" onclick="addLower(4)">
+                    <p>4</p>
+                </div>
+                <div id="multiply" onclick="addUpper(' * ')">
+                    <p>*</p>
+                </div>
+                <div id="no3" onclick="addLower(3)">
+                    <p>3</p>
+                </div>
+                <div id="no2" onclick="addLower(2)">
+                    <p>2</p>
+                </div>
+                <div id="no1" onclick="addLower(1)">
+                    <p>1</p>
+                </div>
+                <div id="subtract" onclick="addUpper(' - ')">
+                    <p>-</p>
+                </div>
+                <div id="point" onclick="addLower('.')">
+                    <p>.</p>
+                </div>
+                <div id="no0" onclick="addLower(0)">
+                    <p>0</p>
+                </div>
+                <div id="equal" onclick="solve()">
+                    <p>=</p>
+                </div>
+                <div id="addition" onclick="addUpper(' + ')">
+                    <p>+</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="calc.js"></script>
+    </body>
+</html>
